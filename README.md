@@ -79,3 +79,53 @@ default. Possible configuration values are specified in the
 
 These values are set to the window object by [config.js](./packages/app/public/config.js), which
 also contains the default values for local development.
+
+### Design tokens
+
+Various components throughout the implementation make use of design tokens as specified by the [NL Design System](https://designsystem.gebruikercentraal.nl/).
+
+These design tokens are imported in the [App component](./src/components/app/app.tsx).
+
+By default, The Hague design tokens are used, they are imported through the line:
+
+`import '@gemeente-denhaag/design-tokens-components';`
+
+This import can be changed to use a different set of design tokens, changing the look and feel of the implementation.
+
+Moreover, the implementation uses [its own set of design tokens](./src/styles/nl-portal-design-tokens.css), which by default refer to The Hague design tokens. This file can be modified to suit your needs.
+
+### Assets
+
+Assets, such as the implementation logo, are located in the [assets folder](./src/assets). These files can be modified to for example use your own logo.
+
+### PWA assets
+
+This implementation by default supports PWA functionality. After modifying the assets files mentioned above, use `yarn run generate-pwa-assets` to automatically generate PWA assets (such as a splash screen) based on these assets.
+
+Moreover, the [manifest.json](./public/manifest.json) file can be modified to for example change your PWA application name.
+
+### Localization
+
+The package `@nl-portal/localization` used as a dependency in this implementation, contains default locales and translations.
+
+These locales and translations can be optionally overridden by modifying the files in the [i18n folder](./src/i18n).
+
+In the [App component](./src/components/app/app.tsx), these locale and translation files can then be passed as input to `LocalizationProvider`.
+
+### Footer
+
+The footer of this implementation can be customized inside the [App component](./src/components/app/app.tsx), by changing the values inside the `footer` variable. Please make sure to keep to the included `PortalFooter` interface.
+
+Link titles are translated through translation keys, so make sure to include their respective translations in your assets in the [i18n folder](./src/i18n) under `footerLinks.` and `footerColumns.`.
+
+If you use multiple languages, a link must be specified for each language, their respective languages are specified by the `hrefLang` property.
+
+### Pages
+
+The pages included in the implementation can be customized. This is automatically reflected in the routes present in the implementation.
+
+This can be done by changing the `pages` variables in the [App component](./src/components/app/app.tsx). Please keep to the included `PortalPage` interface.
+
+The icon and component used by each page can be customized.
+
+Each page includes a `titleTranslationKey`, which must refer to an entry in your translation files in each language you include, i.e. `pageTitles.overview`.
