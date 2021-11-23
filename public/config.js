@@ -1,5 +1,5 @@
-window.KEYCLOAK_URL = 'https://keycloak.valtimo.nl/auth';
-window.KEYCLOAK_REALM = 'gemeente-denhaag-public-non-production';
-window.KEYCLOAK_CLIENT_ID = 'gemeente-denhaag-portal-console-dev';
-window.KEYCLOAK_REDIRECT_URI = 'http://localhost:3000/keycloak/callback';
-window.GRAPHQL_URI = 'http://localhost:8081/graphql';
+window.KEYCLOAK_URL = '';
+window.KEYCLOAK_REALM = '';
+window.KEYCLOAK_CLIENT_ID = '';
+window.KEYCLOAK_REDIRECT_URI = '';
+window.GRAPHQL_URI = '';

@@ -19,6 +19,8 @@ default. Possible configuration values are specified in the
 These values are set to the window object by [config.js](./packages/app/public/config.js), which
 also contains the default values for local development.
 
+*Note: this configuration is empty by default. Please specify its values before running this project.*
+
 ### Design tokens
 
 Various components throughout the implementation make use of design tokens as specified by the [NL Design System](https://designsystem.gebruikercentraal.nl/).
