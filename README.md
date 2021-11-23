@@ -1,6 +1,6 @@
 # nl-portal-implementation
 
-`nl-portal-implementation` is a package aimed at providing a configurable portal
+`nl-portal-implementation` provides a configurable portal
 implementation for municipalities.
 
 The implementation is built up of reusable components that fit the specifications
