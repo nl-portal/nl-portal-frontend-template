@@ -134,9 +134,9 @@ To add a dependency use `yarn add <package-name>` from the project root. For exa
 To add a development dependency, use `yarn add <package-name> --dev` from the project root. For
 example: `yarn add jest --dev`.
 
-### @nl-portal dependencies
+### @gemeente-denhaag/nl-portal-\* dependencies
 
-This implementation project is based on the @nl-portal/app package from the
+This implementation project is based on the @gemeente-denhaag/nl-portal-app package from the
 [nl-portal-libraries](https://github.com/Gemeente-DenHaag/nl-portal-libraries) mono repo.
 [nl-portal-libraries](https://github.com/Gemeente-DenHaag/nl-portal-libraries) contains the source
 code for the nl-portal dependencies needed to run this implementation.

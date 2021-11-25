@@ -1,5 +1,6 @@
 {
-  "name": "@nl-portal/implementation",
+  "name": "nl-portal-implementation",
+  "private": true,
   "version": "1.0.0",
   "author": "Municipality of The Hague",
   "license": "EUPL-1.2",
