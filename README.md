@@ -47,7 +47,7 @@ Moreover, the [manifest.json](./public/manifest.json) file can be modified to, f
 
 ### Localization
 
-The package `@nl-portal/localization`, used as a dependency in this implementation, contains default locales and translations.
+The package `@gemeente-denhaag/nl-portal-localization`, used as a dependency in this implementation, contains default locales and translations.
 
 These locales and translations can be optionally overridden by modifying the files in the [i18n folder](./src/i18n).
 
