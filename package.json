@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "author": "Municipality of The Hague",
   "license": "EUPL-1.2",
+  "engines": {
+    "node": ">=14 <17"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
