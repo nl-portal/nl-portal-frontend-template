@@ -4,7 +4,7 @@ import '@gemeente-denhaag/nl-portal-user-interface/dist/index.css';
 import '../../styles/nl-portal-design-tokens.css';
 import {KeycloakWrapper} from '@gemeente-denhaag/nl-portal-authentication';
 import {LocalizationProvider} from '@gemeente-denhaag/nl-portal-localization';
-import {ApolloWrapper} from '@gemeente-denhaag/nl-portal-api';
+import {ApiWrapper} from '@gemeente-denhaag/nl-portal-api';
 import {Offline, Online} from 'react-detect-offline';
 import {
   AccountPage,
@@ -97,7 +97,15 @@ const pages: Array<PortalPage> = [
   },
   {
     icon: <DocumentIcon />,
-    pageComponent: <FormPage />,
+    pageComponent: (
+      <FormPage
+        openFormsBaseUrl={config.OPEN_FORMS_BASE_URL}
+        openFormsFormId={config.OPEN_FORMS_FORM_ID}
+        openFormsEntryEnv={config.OPEN_FORMS_ENTRY_ENV}
+        openFormsSdkUrl={config.OPEN_FORMS_SDK_URL}
+        openFormsStylesUrl={config.OPEN_FORMS_STYLES_URL}
+      />
+    ),
     path: '/formulier',
     titleTranslationKey: 'form',
     showInMenu: false,
@@ -158,7 +166,7 @@ const App = () => (
         url={config.KEYCLOAK_URL}
         redirectUri={config.KEYCLOAK_REDIRECT_URI}
       >
-        <ApolloWrapper uri={config.GRAPHQL_URI}>
+        <ApiWrapper graphqlUri={config.GRAPHQL_URI} restUri={config.REST_URI}>
           <LocalizationProvider customMessages={CUSTOM_MESSAGES}>
             <Layout
               pages={pages}
@@ -168,7 +176,7 @@ const App = () => (
               footer={footer}
             />
           </LocalizationProvider>
-        </ApolloWrapper>
+        </ApiWrapper>
       </KeycloakWrapper>
     </Online>
     <Offline>
