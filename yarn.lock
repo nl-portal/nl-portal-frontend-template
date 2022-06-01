@@ -1513,12 +1513,24 @@
     "@gemeente-denhaag/basedatadisplayprops" "0.2.3-alpha.70"
     "@gemeente-denhaag/dotindicator" "0.1.1-alpha.70"
 
+"@gemeente-denhaag/basedatadisplayprops@0.2.3-alpha.176":
+  version "0.2.3-alpha.176"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/basedatadisplayprops/-/basedatadisplayprops-0.2.3-alpha.176.tgz#390f90962fb7e031f12fe4be33ed97bca373e421"
+  integrity sha512-j3xIIKZCGRuzfQNmf63k0KKNnt5mxmV2KHinLgC+hBn9auGa4bxVH6xGxbiw84j9BPpaTI53KGNtX1GBl50qzA==
+  dependencies:
+    "@gemeente-denhaag/baseprops" "0.2.3-alpha.176"
+
 "@gemeente-denhaag/basedatadisplayprops@0.2.3-alpha.70":
   version "0.2.3-alpha.70"
   resolved "https://registry.yarnpkg.com/@gemeente-denhaag/basedatadisplayprops/-/basedatadisplayprops-0.2.3-alpha.70.tgz#b2158f443c0d47961d253d4d845a2960d2e13b9d"
   integrity sha512-Xxs7EgD7E8vRjm2F6dHerEPdUt997Uyhado5lXfPN+Cq8oPuc77WmOM8qUSgLhVEMpYpVTvyMPoZIaOhZg+7bA==
   dependencies:
     "@gemeente-denhaag/baseprops" "0.2.3-alpha.70"
+
+"@gemeente-denhaag/baseprops@0.2.3-alpha.176":
+  version "0.2.3-alpha.176"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/baseprops/-/baseprops-0.2.3-alpha.176.tgz#69111964f228a2cb8b27688a69cc04ba65e8711a"
+  integrity sha512-eB+I8ssHdA1JeiNzuO7l9DE8zoi6uJ0ciXRJSFxcIvfI+/C1wuZGUeVmBcaxaxQ7pwfu2L0GcgeYJB+c80R2Ew==
 
 "@gemeente-denhaag/baseprops@0.2.3-alpha.70":
   version "0.2.3-alpha.70"
@@ -1635,6 +1647,11 @@
     "@gemeente-denhaag/baseprops" "0.2.3-alpha.70"
     "@material-ui/core" "4.12.3"
 
+"@gemeente-denhaag/icons@0.2.3-alpha.176":
+  version "0.2.3-alpha.176"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/icons/-/icons-0.2.3-alpha.176.tgz#1e6326133919e5e68332d422c670cba972a01bf2"
+  integrity sha512-H8oeIv+Fq40LIopRwzfzm2dB+TaOTMZ4jRxTfL85tuprmBajiplQzGDK6I7YB3UiX5jswELMK0pQuebiVE4iuA==
+
 "@gemeente-denhaag/icons@0.2.3-alpha.70":
   version "0.2.3-alpha.70"
   resolved "https://registry.yarnpkg.com/@gemeente-denhaag/icons/-/icons-0.2.3-alpha.70.tgz#eccfe0c105134f969e4527a3759c9a4bde314428"
@@ -1677,45 +1694,47 @@
     "@gemeente-denhaag/baseprops" "0.2.3-alpha.70"
     "@gemeente-denhaag/icons" "0.2.3-alpha.70"
 
-"@gemeente-denhaag/nl-portal-api@^1.0.1-alpha.0", "@gemeente-denhaag/nl-portal-api@^1.0.1-alpha.28":
-  version "1.0.1-alpha.28"
-  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/nl-portal-api/-/nl-portal-api-1.0.1-alpha.28.tgz#221ecb08222fea5cf751db997cfdb465a10a9f1d"
-  integrity sha512-5SjsJXmMsyf6J71prhcyqe0J3T5GtsvX3fEtw+lMYmvcV8oUO/+/gg1JbXzVqHmo2DeKMsPCEpT/4wLZ5cKtIA==
+"@gemeente-denhaag/nl-portal-api@^1.0.1-alpha.54":
+  version "1.0.1-alpha.54"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/nl-portal-api/-/nl-portal-api-1.0.1-alpha.54.tgz#3cc3dbe3c7959f594aa770c9706ebca25eafdf3d"
+  integrity sha512-uAGI2nTfZY1ZDvfbuUzy3uWwRcbidXivqxUsfgixCKSvxdXFa9fhAb0DkRm77R3Fs8zPWF+RVZJ1wMhTs8o4lA==
   dependencies:
     "@apollo/client" "^3.4.11"
-    "@gemeente-denhaag/nl-portal-authentication" "^1.0.1-alpha.28"
+    "@gemeente-denhaag/nl-portal-authentication" "^1.0.1-alpha.54"
     apollo-boost "^0.4.9"
     graphql "^15.5.3"
     graphql-tag "^2.12.5"
     react-apollo "^3.1.5"
     react-apollo-hooks "^0.5.0"
 
-"@gemeente-denhaag/nl-portal-authentication@^1.0.1-alpha.0", "@gemeente-denhaag/nl-portal-authentication@^1.0.1-alpha.28":
-  version "1.0.1-alpha.28"
-  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/nl-portal-authentication/-/nl-portal-authentication-1.0.1-alpha.28.tgz#50d8f09f9a254e4bba47af4f1dda6def2fcd40f7"
-  integrity sha512-Ewtq80Nr+TW7oJzqUUyLe9WlywbA6eY06u4j90oWW8UQSp68ERqrXr4yXxWbecRCZJtw48L76iE9zs1/oTi0Xg==
+"@gemeente-denhaag/nl-portal-authentication@^1.0.1-alpha.54":
+  version "1.0.1-alpha.54"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/nl-portal-authentication/-/nl-portal-authentication-1.0.1-alpha.54.tgz#089f68777fa78607eda847a6b575336f8434269e"
+  integrity sha512-AXxUa2L02tdklNNy9dhaG5mQIBdC4lbt6Og4aIKv8rMWV7tSg0a82Vyze9mS+SdcEnlmo54EtGrDhKWh/jFaww==
   dependencies:
     "@react-keycloak/web" "^3.4.0"
+    jwt-decode "^3.1.2"
     keycloak-js "^15.0.1"
 
-"@gemeente-denhaag/nl-portal-localization@^1.0.1-alpha.0", "@gemeente-denhaag/nl-portal-localization@^1.0.1-alpha.28":
-  version "1.0.1-alpha.28"
-  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/nl-portal-localization/-/nl-portal-localization-1.0.1-alpha.28.tgz#9473558b5c3847b8b0cbd3115873ca1fd255de29"
-  integrity sha512-kmIO+SXZimESpuo/PMRqunl/Wldno4jBIRNjXwEK7Whks9+qs+p5pkCokpw8TJ+erby88KhiKXB2XlQYFlCt8w==
+"@gemeente-denhaag/nl-portal-localization@^1.0.1-alpha.54":
+  version "1.0.1-alpha.54"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/nl-portal-localization/-/nl-portal-localization-1.0.1-alpha.54.tgz#9dc4b26aa9cdc90401a54260b18c9435148f73dd"
+  integrity sha512-fdJEGfBbxabxByviWVXwmDxNSJu1y9PbXwRaV9zBVro/Cyml0W27L8Sd4qHADHqKHaGLgNELlBGLM+itk6Z52Q==
   dependencies:
     deepmerge "^4.2.2"
     react-intl "^5.20.10"
 
-"@gemeente-denhaag/nl-portal-user-interface@^1.0.1-alpha.0":
-  version "1.0.1-alpha.28"
-  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/nl-portal-user-interface/-/nl-portal-user-interface-1.0.1-alpha.28.tgz#31c76f35910a6bb24df979154159c3e9ae7a3978"
-  integrity sha512-cBMebLd6O+slG6bwehREjWI+DqPXO6lzKAuws9efpl0+nt/GW3p9NxEbKwWwhyBGX86sOvNfl6INbOdO6H3eSw==
+"@gemeente-denhaag/nl-portal-user-interface@^1.0.1-alpha.54":
+  version "1.0.1-alpha.54"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/nl-portal-user-interface/-/nl-portal-user-interface-1.0.1-alpha.54.tgz#2a7942415ba526600975afbb2f3a91124431f133"
+  integrity sha512-hEeYpMwPMkcIeduSWhUVyr+Ixycjpknk3r3WU90cdm27sYtt1yDr+d786VZdtKSXuLU91xYFSjJYIcTF0dGzHg==
   dependencies:
     "@gemeente-denhaag/components-react" "0.1.1-alpha.8"
     "@gemeente-denhaag/icons" "0.2.3-alpha.70"
-    "@gemeente-denhaag/nl-portal-api" "^1.0.1-alpha.28"
-    "@gemeente-denhaag/nl-portal-authentication" "^1.0.1-alpha.28"
-    "@gemeente-denhaag/nl-portal-localization" "^1.0.1-alpha.28"
+    "@gemeente-denhaag/nl-portal-api" "^1.0.1-alpha.54"
+    "@gemeente-denhaag/nl-portal-authentication" "^1.0.1-alpha.54"
+    "@gemeente-denhaag/nl-portal-localization" "^1.0.1-alpha.54"
+    "@gemeente-denhaag/process-steps" "0.1.0-alpha.5"
     "@react-hook/size" "^2.1.2"
     "@react-hook/window-scroll" "^1.3.0"
     "@react-keycloak/web" "^3.4.0"
@@ -1749,6 +1768,15 @@
   integrity sha512-atVItDItWVwKqochLgllcKgMTqVuVFBgEIV/yLRFYCFG+nZ1NdNMRLw+SzZJ8VIsZM8iS/n9T4yBO8Qko6SOzw==
   dependencies:
     "@material-ui/pickers" "3.3.10"
+
+"@gemeente-denhaag/process-steps@0.1.0-alpha.5":
+  version "0.1.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/process-steps/-/process-steps-0.1.0-alpha.5.tgz#6302b521d47aab669160d053a98b098895702ed5"
+  integrity sha512-5fSTsYjDt8JEouzdLJx65J1GgDL78NR5bSR7wYy67X7yCwJkCpWtoaFzkR6sg0OWmiF42U+MAEokHHRu7KbUeg==
+  dependencies:
+    "@gemeente-denhaag/baseprops" "0.2.3-alpha.176"
+    "@gemeente-denhaag/icons" "0.2.3-alpha.176"
+    "@gemeente-denhaag/typography" "0.2.3-alpha.176"
 
 "@gemeente-denhaag/radio@0.2.3-alpha.70":
   version "0.2.3-alpha.70"
@@ -1806,6 +1834,13 @@
     "@gemeente-denhaag/icons" "0.2.3-alpha.70"
     "@gemeente-denhaag/typography" "0.2.3-alpha.70"
     "@material-ui/core" "4.12.3"
+
+"@gemeente-denhaag/typography@0.2.3-alpha.176":
+  version "0.2.3-alpha.176"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/typography/-/typography-0.2.3-alpha.176.tgz#9d4366090f714825a09ace9e27f342ce9a88ca04"
+  integrity sha512-Yndw9vO/Gi4UIKANDwXRuvKImjM0pIzNeT9WWqRLb8pQ0/UwdaxMo8w9ZzwaiRwPTAOLjaMLRROycjPYuNq1FQ==
+  dependencies:
+    "@gemeente-denhaag/basedatadisplayprops" "0.2.3-alpha.176"
 
 "@gemeente-denhaag/typography@0.2.3-alpha.70":
   version "0.2.3-alpha.70"
@@ -10631,6 +10666,11 @@ jss@10.9.0, jss@^10.5.1:
   dependencies:
     array-includes "^3.1.3"
     object.assign "^4.1.2"
+
+jwt-decode@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-3.1.2.tgz#3fb319f3675a2df0c2895c8f5e9fa4b67b04ed59"
+  integrity sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==
 
 keycloak-js@^15.0.1:
   version "15.0.2"

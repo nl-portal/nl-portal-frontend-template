@@ -11,15 +11,16 @@ import {
   CasePage,
   CasesPage,
   DocumentsPage,
+  EditAccountPage,
   FormPage,
+  FormsPage,
   Layout,
   NotificationsPage,
   OverviewPage,
   PortalFooter,
   PortalPage,
+  TasksPage,
   ThemesPage,
-  EditAccountPage,
-  FormsPage,
 } from '@gemeente-denhaag/nl-portal-user-interface';
 import {ArchiveIcon, DocumentIcon, GridIcon, InboxIcon, UserIcon} from '@gemeente-denhaag/icons';
 import {CUSTOM_MESSAGES} from '../../i18n';
@@ -72,6 +73,13 @@ const pages: Array<PortalPage> = [
         titleTranslationKey: 'cases',
       },
     ],
+  },
+  {
+    icon: <DocumentIcon />,
+    pageComponent: <TasksPage />,
+    path: '/taken',
+    titleTranslationKey: 'tasks',
+    showInMenu: true,
   },
   {
     icon: <DocumentIcon />,
