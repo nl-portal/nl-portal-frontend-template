@@ -15,3 +15,64 @@ body {
   padding: 0;
   height: 100%;
 }
+
+iframe {
+  display: none;
+}
+
+header .denhaag-button--secondary-action {
+  display: none;
+}
+
+footer img {
+  display: none;
+}
+
+.openforms-layout {
+  background-color: #ffffff !important;
+}
+
+.openforms-layout .openforms-layout__row {
+  padding: 0 !important;
+}
+
+.openforms-card,
+.openforms-progress-indicator {
+  padding: 12px !important;
+}
+
+.openforms-card .openforms-card__body {
+  margin-top: 8px !important;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.utrecht-document > div:first-child > div:first-child {
+  -webkit-box-shadow: inset 0 -5px 0 0 var(--amsterdam-menu-active-color);
+  -moz-box-shadow: inset 0 -5px 0 0 var(--amsterdam-menu-active-color);
+  box-shadow: inset 0 -5px 0 0 var(--amsterdam-menu-active-color);
+}
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.formio-form > .form-group {
+  margin-bottom: 1.56rem;
+}
+
+.text-muted {
+  color: #878787 !important
+}

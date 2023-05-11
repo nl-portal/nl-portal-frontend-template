@@ -5,35 +5,30 @@ import '../../styles/nl-portal-design-tokens.css';
 import {KeycloakWrapper} from '@gemeente-denhaag/nl-portal-authentication';
 import {LocalizationProvider} from '@gemeente-denhaag/nl-portal-localization';
 import {ApiWrapper} from '@gemeente-denhaag/nl-portal-api';
-import {Offline, Online} from 'react-detect-offline';
 import {
-  AccountPage,
   CasePage,
   CasesPage,
   DocumentsPage,
-  EditAccountPage,
-  FormPage,
-  FormsPage,
-  Layout,
   NotificationsPage,
-  OverviewPage,
+  Layout,
   PortalFooter,
   PortalPage,
-  TasksPage,
-  ThemesPage,
 } from '@gemeente-denhaag/nl-portal-user-interface';
-import {ArchiveIcon, DocumentIcon, GridIcon, InboxIcon, UserIcon} from '@gemeente-denhaag/icons';
+import {ArchiveIcon, DocumentIcon, GridIcon, InboxIcon} from '@gemeente-denhaag/icons';
+import {FormPage} from '../../pages/form';
 import {CUSTOM_MESSAGES} from '../../i18n';
 import {ReactComponent as HeaderLogo} from '../../assets/header-logo.svg';
-import {ReactComponent as HeaderLogoSmall} from '../../assets/header-logo-small.svg';
 import Facet from '../../assets/facet.png';
 import {config} from '../../config';
-import StatusHistoryBackground from '../../assets/status-history-background.svg';
+import {HomePage} from '../../pages/home';
+import {PaymentLandingPage} from '../../pages/payment-landing';
+import {TasksPage} from '../../pages/tasks';
+import {TaskPage} from '../../pages/task';
 
 const pages: Array<PortalPage> = [
   {
     icon: <GridIcon />,
-    pageComponent: <OverviewPage openFormsFormId={config.OPEN_FORMS_FORM_ID} />,
+    pageComponent: <HomePage />,
     path: '/',
     titleTranslationKey: 'overview',
     showInMenu: true,
@@ -44,24 +39,19 @@ const pages: Array<PortalPage> = [
     pageComponent: <NotificationsPage />,
     path: '/berichten',
     titleTranslationKey: 'notifications',
-    showInMenu: true,
+    showInMenu: false,
     showMessagesCount: true,
   },
   {
     icon: <ArchiveIcon />,
-    pageComponent: <CasesPage />,
+    pageComponent: <CasesPage showCaseIdentification/>,
     path: '/zaken',
     titleTranslationKey: 'cases',
     showInMenu: true,
     children: [
       {
         icon: <ArchiveIcon />,
-        pageComponent: (
-          <CasePage
-            statusHistoryFacet={<img src={Facet} alt="" />}
-            statusHistoryBackground={<img src={StatusHistoryBackground} alt="" />}
-          />
-        ),
+        pageComponent: <CasePage statusHistoryFacet={<img src={Facet} alt="" />} />,
         path: '/zaak',
         titleTranslationKey: 'cases',
         showLinkToParent: true,
@@ -83,56 +73,33 @@ const pages: Array<PortalPage> = [
   },
   {
     icon: <DocumentIcon />,
-    pageComponent: <ThemesPage />,
-    path: '/themas',
-    titleTranslationKey: 'themes',
-    showInMenu: true,
+    pageComponent: <TaskPage />,
+    path: '/taken/:formulierId',
+    titleTranslationKey: 'task',
+    showInMenu: false,
   },
   {
     icon: <DocumentIcon />,
-    pageComponent: <FormsPage />,
-    path: '/formulieren',
-    titleTranslationKey: 'forms',
-    showInMenu: true,
-  },
-  {
-    icon: <UserIcon />,
-    pageComponent: <AccountPage />,
-    path: '/account',
-    titleTranslationKey: 'account',
-    showInMenu: true,
-    children: [
-      {
-        icon: <UserIcon />,
-        pageComponent: <EditAccountPage />,
-        path: '/aanpassen',
-        titleTranslationKey: 'account',
-        showLinkToParent: true,
-      },
-    ],
-  },
-  {
-    icon: <DocumentIcon />,
-    pageComponent: (
-      <FormPage
-        openFormsBaseUrl={config.OPEN_FORMS_BASE_URL}
-        openFormsEntryEnv={config.OPEN_FORMS_ENTRY_ENV}
-        openFormsSdkUrl={config.OPEN_FORMS_SDK_URL}
-        openFormsStylesUrl={config.OPEN_FORMS_STYLES_URL}
-      />
-    ),
-    path: '/formulier',
+    pageComponent: <FormPage />,
+    path: '/formulier/:caseDefinitionId',
     titleTranslationKey: 'form',
+    showInMenu: false,
+  },
+  {
+    icon: <GridIcon />,
+    pageComponent: <PaymentLandingPage />,
+    path: '/payment-landing',
+    titleTranslationKey: 'overview',
     showInMenu: false,
   },
 ];
 
 const footer: PortalFooter = [
   {
-    titleTranslationKey: 'theHague',
+    titleTranslationKey: 'amsterdam',
     links: [
-      {linkTranslationKey: 'goToTheHague', url: 'https://www.denhaag.nl/nl.htm', hrefLang: 'nl'},
-      {linkTranslationKey: 'goToTheHague', url: 'https://www.denhaag.nl/en.htm', hrefLang: 'en'},
+      {linkTranslationKey: 'goToAmsterdam', url: 'https://www.amsterdam.nl', hrefLang: 'nl'},
+      {linkTranslationKey: 'goToAmsterdam', url: 'https://www.amsterdam.nl/en/', hrefLang: 'en'},
     ],
   },
   {
@@ -140,72 +107,34 @@ const footer: PortalFooter = [
     links: [
       {
         linkTranslationKey: 'accessibility',
-        url: 'https://www.denhaag.nl/nl/toegankelijkheidsverklaring.htm',
+        url: '',
         hrefLang: 'nl',
-      },
-      {
-        linkTranslationKey: 'accessibility',
-        url: 'https://www.denhaag.nl/en/toegankelijkheidsverklaring.htm',
-        hrefLang: 'en',
-      },
-      {
-        linkTranslationKey: 'dataProtection',
-        url: 'https://www.denhaag.nl/nl/verklaring-inzake-gegevensbescherming.htm',
-        hrefLang: 'nl',
-      },
-      {
-        linkTranslationKey: 'dataProtection',
-        url: 'https://www.denhaag.nl/en/data-protection-declaration.htm',
-        hrefLang: 'en',
-      },
-      {
-        linkTranslationKey: 'proclaimer',
-        url: 'https://www.denhaag.nl/home/algemeen/proclaimer.htm',
-        hrefLang: 'nl',
-      },
-      {
-        linkTranslationKey: 'proclaimer',
-        url: 'https://www.denhaag.nl/en/proclaimer.htm',
-        hrefLang: 'en',
       },
     ],
   },
 ];
 
+localStorage.setItem('NL_PORTAL_LANG', 'nl-NL');
+
 const App = () => (
   <Fragment>
-    <Online>
-      <KeycloakWrapper
+    <KeycloakWrapper
         clientId={config.KEYCLOAK_CLIENT_ID}
         realm={config.KEYCLOAK_REALM}
         url={config.KEYCLOAK_URL}
         redirectUri={config.KEYCLOAK_REDIRECT_URI}
-      >
-        <ApiWrapper graphqlUri={config.GRAPHQL_URI} restUri={config.REST_URI}>
-          <LocalizationProvider customMessages={CUSTOM_MESSAGES}>
-            <Layout
+    >
+      <ApiWrapper graphqlUri={config.GRAPHQL_URI} restUri={config.REST_URI}>
+        <LocalizationProvider customMessages={CUSTOM_MESSAGES}>
+          <Layout
               pages={pages}
               headerLogo={<HeaderLogo />}
-              headerLogoSmall={<HeaderLogoSmall />}
-              facet={<img src={Facet} alt="" />}
+              headerLogoSmall={<HeaderLogo />}
               footer={footer}
-            />
-          </LocalizationProvider>
-        </ApiWrapper>
-      </KeycloakWrapper>
-    </Online>
-    <Offline>
-      <LocalizationProvider customMessages={CUSTOM_MESSAGES}>
-        <Layout
-          pages={pages}
-          headerLogo={<HeaderLogo />}
-          headerLogoSmall={<HeaderLogoSmall />}
-          facet={<img src={Facet} alt="" />}
-          footer={footer}
-          offline
-        />
-      </LocalizationProvider>
-    </Offline>
+          />
+        </LocalizationProvider>
+      </ApiWrapper>
+    </KeycloakWrapper>
   </Fragment>
 );
 

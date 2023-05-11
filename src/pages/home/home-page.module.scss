@@ -1,0 +1,24 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  --denhaag-card-width: 300px;
+  --denhaag-card-height: 125px;
+  --denhaag-card-wrapper-padding-block: 15px;
+  --denhaag-card-wrapper-padding-inline: 15px;
+
+  time {
+    visibility: hidden;
+  }
+}
+
+.case-link {
+  align-items: center;
+  display: flex;
+  padding-top: 1rem;
+}
+
+.case-link a {
+  color: var(--denhaag-menu-button-color);
+}

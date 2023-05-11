@@ -1,6 +1,6 @@
 {
-  "short_name": "MijnDenHaag",
-  "name": "MijnDenHaag",
+  "short_name": "MijnAmsterdam",
+  "name": "MijnAmsterdam",
   "icons": [
     {
       "src": "pwa/manifest-icon-192.png",

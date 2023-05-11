@@ -1,0 +1,51 @@
+defaultTasks 'buildArtifacts'
+
+ext {
+  dockerHostname = System.getenv("ECR_HOSTNAME")
+  dockerRepositoryName = System.getenv("ECR_REPO_NAME")
+  buildVersion = System.getenv("VERSION")
+}
+
+
+// FUNCTIONS
+def removeDockerImage() {
+  "docker rmi -f ${dockerHostname}/${dockerRepositoryName}:${buildVersion}".execute()
+  println "Removed docker images"
+}
+
+// TASKS
+task copyDockerfileToDeploymentContext(type: Copy) {
+  from '.'
+  into 'deployment'
+  include 'Dockerfile'
+
+  outputs.files file('deployment/Dockerfile')
+}
+
+// TASKS
+task copyNginxToDeploymentContext(type: Copy) {
+  from 'conf'
+  into 'deployment/conf'
+  include '*'
+
+  outputs.files file('deployment/conf/default.conf')
+}
+
+
+task runDockerBuild(type: Exec, dependsOn: [copyDockerfileToDeploymentContext, copyNginxToDeploymentContext]) {
+  inputs.file(new File("deployment/Dockerfile"))
+  outputs.upToDateWhen {
+    // let execution of this task depend only on the input: if the JAR has changed
+    return true
+  }
+
+  commandLine 'docker', 'build', '-t', "${dockerHostname}/${dockerRepositoryName}:${buildVersion}", '-f', "deployment${File.separator}Dockerfile", 'deployment'
+}
+
+task pushImage(type: Exec, dependsOn: [runDockerBuild]) {
+  commandLine 'docker', 'push', "${dockerHostname}/${dockerRepositoryName}:${buildVersion}"
+
+  doLast {
+    removeDockerImage()
+  }
+}

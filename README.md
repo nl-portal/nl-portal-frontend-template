@@ -89,22 +89,14 @@ The icon and component used by each page can be customized.
 Each page includes a `titleTranslationKey`, which must refer to an entry in your translation files
 in each language you include, i.e. `pageTitles.overview`.
 
-### Keycloak
-
-By default, the implementation is wrapped in `ReactKeycloakProvider` from the package  `@react-keycloak/web`.
-
-Using functionality from this package, like hooks, is supported in the implementation.
-
-Firstly, make sure to include the dependency `@react-keycloak/web` in your implementation.
-
-After including this dependency, hooks like `useKeycloak` can be imported directly from this package and used in your implementation. It automatically works with the Keycloak instance in which the application is wrapped. 
-
 ## Development
 
 To contribute to this repository, first [clone](https://git-scm.com/docs/git-clone) it to your
 device.
 
-Make sure to [install yarn](https://yarnpkg.com/getting-started/install).
+### Required software
+
+* [Yarn](https://yarnpkg.com/getting-started/install)
 
 ### Installing dependencies
 
