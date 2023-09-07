@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nl-portal-frontend-dist
-          path: build/
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
