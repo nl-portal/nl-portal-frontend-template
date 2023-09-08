@@ -47,14 +47,14 @@ jobs:
       - name: Build artifacts
         run: ./gradlew build
 
-      - name: list folders
-        run: tree .
+      - name: Preparation step
+        run: mkdir deployment | mv build/ conf/ deployment/
 
       - name: Archive dist folder
         uses: actions/upload-artifact@v2
         with:
           name: nl-portal-frontend-dist
-          path: .
+          path: deployment/
 
   deploy:
     runs-on: ubuntu-latest
