@@ -14,7 +14,7 @@ on:
 
 env:
   GITHUB_REGISTRY: ghcr.io
-  DOCKER_IMAGE_NAME: nl-portal-frontend
+  DOCKER_IMAGE_NAME: portal-frontend
   GITHUB_NAMESPACE: nl-portal
 
 jobs:
@@ -41,11 +41,8 @@ jobs:
 
       - name: NPM install and build
         run: |
-          npm install
-          npm run build
-
-      - name: Build artifacts
-        run: ./gradlew build
+          yarn install
+          yarn build
 
       - name: Preparation step
         run: mkdir deployment | mv build/ conf/ deployment/
