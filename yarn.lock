@@ -1594,10 +1594,10 @@
     "@gemeente-denhaag/timeline" "0.2.3-alpha.70"
     "@gemeente-denhaag/typography" "0.2.3-alpha.70"
 
-"@gemeente-denhaag/design-tokens-components@0.2.3-alpha.70":
-  version "0.2.3-alpha.70"
-  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/design-tokens-components/-/design-tokens-components-0.2.3-alpha.70.tgz#67a229f7f6d11ae6fd05b7855adb2ca197f4d8cb"
-  integrity sha512-OarhoeRT663mTLVcFEWcr/83W3MjcfBJ4j8+DXBUqpZEapJeLRPTNMo4E34IuB7d3eiJTFz0eWRmBXkFvWyaSQ==
+"@gemeente-denhaag/design-tokens-components@0.2.3-alpha.419":
+  version "0.2.3-alpha.419"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/design-tokens-components/-/design-tokens-components-0.2.3-alpha.419.tgz#c9f7b10d4237136016d9f5cf8860505a16ff0524"
+  integrity sha512-hyyZB7BAwNmM0At5rkSWITGRfXziBUR3lW/WQfOpHrkngjQc8RYtQ8e9vNZOnl7VpUYwOGoXgOB+C9oFvNE8tQ==
 
 "@gemeente-denhaag/divider@0.2.3-alpha.70":
   version "0.2.3-alpha.70"
