@@ -15,3 +15,172 @@ body {
   padding: 0;
   height: 100%;
 }
+.denhaag-responsive-content--sidebar {
+  margin-top: 2rem !important;
+}
+.denhaag-page-header {
+  background-color: var(--rijkshuisstijl-grijs) !important;
+}
+.denhaag-page {
+  background-color: var(--rijkshuisstijl-grijs) !important;
+}
+.denhaag-responsive-content {
+  padding: 0;
+}
+._header-wrapper--legacy_1lu9w_54 {
+  height: 142px;
+}
+._header_ngaqb_1 {
+  height: 143px;
+  background-color: var(--rijkshuisstijl-wit);
+  border-bottom: 2px solid var(--rijkshuisstijl-hemelblauw);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.24);
+}
+._header__logo-container_ngaqb_60 {
+  display: none;
+}
+
+footer {
+  border-top: 2px solid var(--rijkshuisstijl-lintblauw);
+}
+.denhaag-responsive-content:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #154273;
+  width: 44px;
+  height: 78px;
+  content: "";
+  background-image: url(../src/assets/logo-rijksoverheid-wapen.svg) !important;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 80% 60%;
+}
+.denhaag-page-footer:before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateY(-32px) translateX(-22px);
+  background-color: #154273;
+  width: 44px;
+  height: 32px;
+  content: "";
+}
+._user-name__paragraph_tn0u3_16 {
+  display: none;
+}
+.denhaag-button--secondary-action:hover span{
+  color: var(--rijkshuisstijl-wit) !important;
+}
+.denhaag-button:hover {
+  background-color: var(--rijkshuisstijl-lintblauw) !important;
+}
+.denhaag-page-footer {
+  margin-block-start: 0 !important;
+  background-color: var(--rijkshuisstijl-donkergrijs) !important;
+  padding-bottom: 3rem;
+}
+.denhaag-page-content {
+  min-height: calc(100vh - 600px);
+}
+._header__elements-desktop_ngaqb_86:before {
+  content: "MijnOverheid";
+  font-size: 2rem;
+  padding-left: 230px;
+  font-weight: 300;
+  color: #000000;
+  float: left;
+}
+._header__elements-desktop_ngaqb_86 {
+  width: 100%;
+  display: block;
+  text-align: right;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding-top: 5rem;
+  height: auto;
+}
+._header__element--medium-spacing_ngaqb_115:before {
+  content: "B. Burger";
+  margin-right: 1.5rem;
+}
+._header__element--medium-spacing_ngaqb_115 {
+  display: inline;
+  margin: 0;
+}
+._header__element--medium-spacing_ngaqb_115:after {
+  clear: both;
+}
+._header__inner_ngaqb_49 {
+  width: 100vw !important;
+  display: block !important;
+}
+
+.denhaag-page-footer {
+  height: 300px;
+}
+.denhaag-button--secondary-action {
+  display: none !important;
+}
+h1, h2, h3 {
+  font-weight: 300 !important;
+  color: var(--rijkshuisstijl-zwart) !important;
+}
+
+.denhaag-menu-button {
+  padding: 0 1rem !important;
+}
+.denhaag-menu-button--active, .denhaag-menu-button--active, .denhaag-menu-button--active:link {
+  background-color: #d9ebf7 !important;
+  border-radius: 10px;
+  border: 0 solid !important;
+  font-weight: normal !important;
+}
+.denhaag-menu-button:active {
+  border-radius: 10px;
+  border: 0 solid !important;
+}
+.utrecht-heading-4 {
+  font-weight: 300 !important;
+  margin-bottom: .5rem !important;
+}
+.denhaag-menu-button {
+  margin-bottom: .5rem !important;
+}
+.denhaag-link span {
+  font-weight: lighter !important;
+  font-size: .9rem;
+  margin-bottom: .5rem !important;
+  margin-left: 1.5rem;
+}
+.denhaag-link span.denhaag-link__icon {
+  position: absolute !important;
+  margin-left: -.2rem;
+}
+.denhaag-page-content__main section,
+.denhaag-page-content__main ._page-grid_1npwh_1 div:not([class]) {
+  background-color: #ffffff !important;
+  padding: 2rem;
+  box-shadow: 0 5px 6px rgba(0,0,0,.05);
+  border-radius: 10px;
+}
+
+._footer__column--spaced_ij9z0_38,
+._footer__column_ij9z0_31 {
+  margin: 1rem 0 !important;
+  min-width: 30%!important;
+}
+
+._footer__inner_ij9z0_13 {
+  margin: 1rem auto !important;
+}
+
+._page-grid_1npwh_1 {
+  --nlportal-page-grid-gap: 3rem;
+}
+
+a[href*="account"]._denhaag-menu-button--flex_1llc2_1 {
+  margin-top: 2rem;
+}
