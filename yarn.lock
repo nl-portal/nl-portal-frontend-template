@@ -1652,6 +1652,11 @@
   resolved "https://registry.yarnpkg.com/@gemeente-denhaag/icons/-/icons-0.2.3-alpha.176.tgz#1e6326133919e5e68332d422c670cba972a01bf2"
   integrity sha512-H8oeIv+Fq40LIopRwzfzm2dB+TaOTMZ4jRxTfL85tuprmBajiplQzGDK6I7YB3UiX5jswELMK0pQuebiVE4iuA==
 
+"@gemeente-denhaag/icons@0.2.3-alpha.421":
+  version "0.2.3-alpha.421"
+  resolved "https://registry.yarnpkg.com/@gemeente-denhaag/icons/-/icons-0.2.3-alpha.421.tgz#57866a6e31e19c70a6f05308a8d2cca22bc693e6"
+  integrity sha512-QxLPAvmclq/GQbLUGrQEfPnWBrV/1mJA4UOcZExfSxJUP92mb+e0ZCMgZRiuEo1F98dhjXcA8Rk58FYfrUZ4WQ==
+
 "@gemeente-denhaag/icons@0.2.3-alpha.70":
   version "0.2.3-alpha.70"
   resolved "https://registry.yarnpkg.com/@gemeente-denhaag/icons/-/icons-0.2.3-alpha.70.tgz#eccfe0c105134f969e4527a3759c9a4bde314428"
