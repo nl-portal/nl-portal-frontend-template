@@ -20,6 +20,12 @@ export const menuItems: NavigationItem[][] = [
       path: paths.messages,
       icon: <EmailIcon />
     }
+  ],[
+    {
+      titleTranslationKey: "tasks",
+      path: paths.tasks,
+      icon: <InboxIcon />
+    }
   ],
   [
     {
