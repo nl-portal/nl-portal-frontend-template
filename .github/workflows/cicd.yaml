@@ -88,21 +88,20 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - id: docker_meta
-        uses: docker/metadata-action@v4.4.0
+        uses: docker/metadata-action@v5
         with:
           images: ${{ env.GITHUB_REGISTRY }}/${{ env.GITHUB_NAMESPACE }}/${{ env.DOCKER_IMAGE_NAME }}
           tags: type=raw,value=${{ needs.build.outputs.tagToDeploy }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v4.0.0
+        uses: docker/build-push-action@v6
         id: build-and-push
         with:
           file: Dockerfile
           context: .
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
-          labels: |
-            org.opencontainers.image.source: ${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}
+          labels: ${{ steps.meta.outputs.labels }}
 
       - name: Sign the images with GitHub OIDC Token
         env:
