@@ -101,7 +101,7 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          labels: ${{ steps.docker_meta.outputs.labels }}
 
       - name: Sign the images with GitHub OIDC Token
         env:
