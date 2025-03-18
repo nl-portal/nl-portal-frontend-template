@@ -48,7 +48,7 @@ jobs:
         run: mkdir deployment | mv build/ conf/ deployment/
 
       - name: Archive dist folder
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: nl-portal-frontend-dist
           path: deployment/
