@@ -101,6 +101,8 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
+          labels:
+            - org.opencontainers.image.source: ${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}
 
       - name: Sign the images with GitHub OIDC Token
         env:
