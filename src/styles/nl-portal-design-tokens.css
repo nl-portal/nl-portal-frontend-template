@@ -38,7 +38,8 @@
   --denhaag-color-blue-3: var(--rijkshuisstijl-wit);
   --denhaag-card-case-title-color: var(--rijkshuisstijl-wit);
   --denhaag-card-case-color: var(--rijkshuisstijl-wit);
-  --denhaag-card-case-secondary-background-color: #00651f;
+  --denhaag-card-case-primary-background-color: var(--rijkshuisstijl-donkerblauw);
+  --denhaag-card-case-secondary-background-color: var(--rijkshuisstijl-donkerblauw);
   --denhaag-card-arrow-color: var(--rijkshuisstijl-donkerblauw);
   --denhaag-card-case-arrow-color: var(--rijkshuisstijl-wit);
   --denhaag-card-case-arrow-active-color: var(--rijkshuisstijl-wit);
@@ -48,7 +49,7 @@
   --utrecht-document-color: #404b4f;
   --utrecht-feedback-neutral-fill-background-color: var(--rijkshuisstijl-donkerblauw);
   --utrecht-feedback-neutral-fill-color: var(--rijkshuisstijl-wit);
-  
+
   --nlportal-heading-5-color: var(--rijkshuisstijl-donkerblauw);
   --nlportal-heading-color: var(--rijkshuisstijl-zwart);
   --nlportal-heading-3-color: var(--rijkshuisstijl-donkerblauw);
