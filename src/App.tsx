@@ -5,7 +5,6 @@ import {KeycloakWrapper} from "@nl-portal/nl-portal-authentication";
 import {LocalizationProvider} from "@nl-portal/nl-portal-localization";
 import {ApiProvider} from "@nl-portal/nl-portal-api";
 import {Layout, MessagesProvider, NotificationProvider, useEnableMessagesCount} from "@nl-portal/nl-portal-user-interface";
-import {CUSTOM_MESSAGES} from "./i18n/custom-messages/custom-messages";
 import HeaderLogo from "./assets/header-logo.svg";
 import HeaderLogoSmall from "./assets/header-logo-small.svg";
 import {footerData} from "./constants/footer-data";
@@ -69,7 +68,7 @@ const App = () => {
                         graphqlUri={config.GRAPHQL_URI}
                         restUri={config.REST_URI}
                     >
-                        <LocalizationProvider customMessages={CUSTOM_MESSAGES}>
+                        <LocalizationProvider>
                             <NotificationProvider>
                                 <MessagesProvider enableMessagesCount={enableMessagesCount}>
                                     <Layout

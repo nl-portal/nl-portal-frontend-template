@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Gemeente Rotterdam",
   "license": "EUPL-1.2",
+  "type": "module",
   "engines": {
     "node": "20"
   },
@@ -34,10 +35,10 @@
     ]
   },
   "dependencies": {
-    "@gemeente-denhaag/design-tokens-components": "2.1.0",
-    "@gemeente-denhaag/icons": "2.1.0",
-    "@gemeente-denhaag/link": "2.0.0",
-    "@gemeente-denhaag/typography": "2.0.1",
+    "@gemeente-denhaag/design-tokens-components": "0.2.3",
+    "@gemeente-denhaag/icons": "0.2.3-alpha.422",
+    "@gemeente-denhaag/link": "0.2.3-alpha.422",
+    "@gemeente-denhaag/typography": "0.2.3",
     "@nl-portal/nl-portal-api": "1.5.0",
     "@nl-portal/nl-portal-authentication": "1.5.0",
     "@nl-portal/nl-portal-localization": "1.5.0",
