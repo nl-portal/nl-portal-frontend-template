@@ -91,58 +91,50 @@ in each language you include, i.e. `pageTitles.overview`.
 
 ### Keycloak
 
-By default, the implementation is wrapped in `ReactKeycloakProvider` from the package  `@react-keycloak/web`.
+By default, the implementation is wrapped in `ReactKeycloakProvider` from the package `@react-keycloak/web`.
 
 Using functionality from this package, like hooks, is supported in the implementation.
 
 Firstly, make sure to include the dependency `@react-keycloak/web` in your implementation.
 
-After including this dependency, hooks like `useKeycloak` can be imported directly from this package and used in your implementation. It automatically works with the Keycloak instance in which the application is wrapped. 
+After including this dependency, hooks like `useKeycloak` can be imported directly from this package and used in your implementation. It automatically works with the Keycloak instance in which the application is wrapped.
 
 ## Development
 
 To contribute to this repository, first [clone](https://git-scm.com/docs/git-clone) it to your
 device.
 
-Make sure to [install yarn](https://yarnpkg.com/getting-started/install).
+Make sure to `pnpm` 
 
 ### Installing dependencies
 
-Install dependencies with the command `yarn install` from the project root.
+Install dependencies with the command `pnpm install` from the project root.
 
 ### Starting the project
 
-After installing dependencies, start the project with `yarn run start` from the project root.
+After installing dependencies, start the project with `pnpm dev` from the project root.
 
 ### Building
 
-After installing dependencies, build the project with `yarn run build` from the project root.
+After installing dependencies, build the project with `pnpm build` from the project root.
 
 ### Testing
 
 Testing in this project is done with [Jest](https://jestjs.io/). Run the tests of all packages with
-`yarn run test` from the project root. To keep watching the tests for any changes, use
-`yarn run test:watch`.
+`pnpm test` from the project root. To keep watching the tests for any changes, use
+`pnpm dev`.
 
 ### Linting
 
 Testing in this project is done with [ESLint](https://eslint.org/). Look for linting errors in all
-packages by running `yarn run lint` from the project root. Use `yarn run lint:fix` to automatically
+packages by running `pnpm link` from the project root. Use `pnpm lint:fix` to automatically
 fix these errors.
 
 ### Prettifying
 
 Prettifying in this project is done with [Prettier](https://prettier.io/). Look for formatting
-errors in all packages by running `yarn run prettier` from the project root. Use
-`yarn run prettier:fix` to automatically fix these errors.
-
-### Adding dependencies
-
-To add a dependency use `yarn add <package-name>` from the project root. For example:
-`yarn add jest`.
-
-To add a development dependency, use `yarn add <package-name> --dev` from the project root. For
-example: `yarn add jest --dev`.
+errors in all packages by running `pnpm prettier` from the project root. Use
+`pnpm prettier:fix` to automatically fix these errors.
 
 ### @gemeente-denhaag/nl-portal-\* dependencies
 
@@ -154,10 +146,10 @@ code for the nl-portal dependencies needed to run this implementation.
 These dependencies present in
 [nl-portal-libraries](https://github.com/Gemeente-DenHaag/nl-portal-libraries) are built
 automatically and published as NPM packages. Subsequently, they are used in this repository as
-dependencies listed in [package.json](./package.json).
+dependencies listed in [package.json](./package.json.old).
 
 To use the latest version of these dependencies, simply up their version numbers in
-[package.json](./package.json).
+[package.json](./package.json.old).
 
 ### Tips and guidelines for development
 
