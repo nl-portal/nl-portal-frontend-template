@@ -33,10 +33,11 @@ jobs:
           ts=$(date +'%Y%m%d%H%M')
           echo "image_tag=${branch}-${ts}-${sha}" >> "$GITHUB_OUTPUT"
 
-      - name: NPM install and build
-        run: |
-          yarn install
-          yarn build
+      - name: Install
+        run: npm install -g pnpm && pnpm install
+
+      - name: Build
+        run: pnpm build
 
       - name: Preparation step
         run: mkdir deployment | mv build/ conf/ deployment/
